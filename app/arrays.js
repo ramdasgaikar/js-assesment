@@ -40,7 +40,7 @@ arraysAnswers = {
     return result;
   },
 
-    /**
+  /**
    * Create a new array with the same items as arr, excluding item
    *
    * @param {Number[]} arr - An array of numbers
@@ -49,11 +49,10 @@ arraysAnswers = {
    */
   removeWithoutCopy: function removeWithoutCopy(arr, item) {
     let i = 0;
-    while(i<arr.length) {
-      if(arr[i] == item) {
+    while (i < arr.length) {
+      if (arr[i] == item) {
         arr.splice(i, 1);
-      }
-      else {
+      } else {
         i++;
       }
     }
@@ -149,7 +148,8 @@ arraysAnswers = {
    */
   duplicates: function duplicates(arr) {
     let duplicates = arr.reduce(function(acc, el, i, arr) {
-      if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;
+      if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el);
+      return acc;
     }, []);
     return duplicates;
   },
@@ -174,11 +174,11 @@ arraysAnswers = {
   findAllOccurrences: function findAllOccurrences(arr, target) {
     var result = [];
 
-    arr.forEach(function (item, index) {
-      if(target == item ) {
+    arr.forEach(function(item, index) {
+      if (target == item) {
         result.push(index);
       }
-    })
+    });
     return result;
   }
 };
